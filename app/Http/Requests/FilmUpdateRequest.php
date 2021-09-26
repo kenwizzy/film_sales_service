@@ -24,7 +24,7 @@ class FilmUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'string|required|unique:films',
+            'title' => 'string|required',
             'description'=> 'string|required',
             'price' => 'numeric|required',
             'genre_id' => 'required|numeric'

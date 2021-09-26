@@ -17,7 +17,7 @@
           <li class="nav-item">
               <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
           </li>
-          {{-- @else --}}
+          @else
           <li class="nav-item">
               <a class="nav-link" href="{{url('profile')}}">Update Profile</a>
           </li>

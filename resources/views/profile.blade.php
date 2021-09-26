@@ -73,7 +73,7 @@
                             <input type="password" name="old_password" class="form-control">
                           </div>
 
-                        <button type="" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
 
                 </div>

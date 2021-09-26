@@ -32,10 +32,10 @@ class UserController extends Controller
         return view('profile',compact('user'));
     }
 
-            //Update User's profile
+            //Update User's profile validation => UpdateUserRequest
     public function updateProfile(Request $request){
 
-        $user = User::where('id',Auth::id());
+        $user = User::where('id',Auth::id())->first();
        if($request->password ==  $request->confirm_password){
 
             if(Hash::check($request->old_password, $user->password)){
@@ -48,7 +48,7 @@ class UserController extends Controller
 
                 return redirect()->back()->withSuccess('Profile Updated Successfully');
                }else{
-                return redirect()->back()->withError('No wahala');
+                return redirect()->back()->withError('Please enter previous password to verify');
                }
 
              }else{
